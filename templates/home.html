@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='stylehome.css')}}">
+    <link rel="shortcut icon" href="{{url_for('static', filename='images/poco.png')}}" type="image/x-icon"> <!--LINK PARA FAVICON (LOGO DA ABA DA PAGINA)-->
+
+    <title>Site de Apostas</title>
+</head>
+<body>
+
+<header>
+    <h1>Bem-vindo ao PocoBet</h1>
+    <div class="search-container">
+        <input type="text" placeholder="O que você procura?">
+        <button type="submit">Buscar</button>
+    </div>
+    <img src="{{url_for('static', filename='images/poco.png')}}" alt="Logo da Empresa" class="logo"> 
+
+</header>
+
+<nav>
+    <a href="#">Home</a>
+    <a href="#">Esportes</a>
+    <a href="#">Cassino</a>
+    <a href="#">Promoções</a>
+    <a href="{{url_for('contato')}}">Contato</a>
+</nav>
+
+<div class="banner">
+    <h1>Faça suas apostas e ganhe prêmios!</h1>
+</div>
+
+<div class="content">
+    <div>
+        <h2>Esportes</h2>
+        <p>Aposte em seus esportes favoritos com as melhores odds do mercado.</p>
+    </div>
+    <div>
+        <h2>Cassino</h2>
+        <p>Desfrute de jogos de cassino emocionantes com prêmios incríveis.</p>
+    </div>
+    <div>
+        <h2>Promoções</h2>
+        <p>Confira as promoções e bônus exclusivos para nossos clientes.</p>
+    </div>
+</div>
+
+
+
+<footer>
+    <p>&copy; 2024 PocoBet. Todos os direitos reservados.</p>
+</footer>
+
+</body>
+</html>

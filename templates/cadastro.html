@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='cadastro.css')}}">
+    <title>Cadastre-se</title>
+</head>
+<body>
+     <div class="container">
+         <div class="form-imagem">
+            <img src="{{url_for('static', filename='images/poco.png')}}" class="imagem_poco">
+         </div>
+         <div class="form">
+             <form action="{{url_for('add_usuario')}}" method="POST">
+                     <div class="form-header">
+                         <div class="title">
+                          <h1> Cadastre-se  </h1>
+                           </div>
+
+
+                            <div class="login-button">
+                            <button> <a href="login.html"> Entrar </a></button>
+                            </div>   
+                     </div>
+               <div class="input-group"> 
+                     <div class="input-box">
+                        <label for="firstname">Nome:</label>
+                        <input id="firstname" type="text" name="name" placeholder="insira seu nome completo" required>
+
+                     </div>
+                     <div class="input-box">
+                        <label for="email">email:</label>
+                        <input id="email" type="email" name="email" placeholder="digite seu email:" required>
+
+                     </div>
+
+                     <div class="input-box">
+                        <label for="password">Senha:</label>
+                        <input id="password" type="password" name="password" placeholder="digite sua senha:" required>
+                      </div>
+
+                     <div class="input-box">
+                        <label for="data-nascimento">Data de nascimento:</label>
+                        <input id="data-nascimento" type="date"  name="data-nascimento" required>
+                     </div>
+               </div>
+
+
+
+
+                  <!-- Mostrar mensagem de erro se houver -->
+                  {% if error %}
+                     <p style="color: red;">{{ error }}</p>
+                  {% endif %}
+
+
+
+
+
+               <div class="continue-bottom">
+                  <button type="submit"><a href="#"></a>Continuar </button>
+               </div>
+               
+
+
+
+
+
+
+             </form>
+
+
+
+
+
+
+
+
+         </div>
+
+
+
+
+
+
+
+
+
+
+     </div>
+
+
+
+
+
+
+
+
+
+</body>
+</html>

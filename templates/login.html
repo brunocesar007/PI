@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='login.css')}}">
+    <title> login </title>
+       
+</head>
+<body>
+    <!--FUNDO DO LOGIN-->
+ <div class="main-login">
+  <!--TELA DE LOGIN DA ESQUERDA-->
+    <div class="left-login">  
+      <h1>Faça login para <br> apostar </h1>
+      <img src="{{url_for('static', filename='images/dinheiro.svg')}}" class="left-login-img" alt="dinheiro animacao">
+    </div>
+    <!-- login da direita -->
+    <div class="right-login">
+        <!-- cartao o login -->
+        <div class="card-login"> 
+            <h1>LOGIN</h1> 
+
+
+            
+
+                        <!-- Exibir mensagem de erro, se houver -->
+                        {% if error %}
+                        <p style="color: red;">{{ error }}</p>
+                    {% endif %}
+
+
+
+
+
+
+                <!-- lugar de inserir email e senha -->
+        <form method="POST" action="/login.html">
+          <div class="textfield">
+              <label for="usuario">Email</label><br>
+              <input type="email" name="email" placeholder="Insira seu email" required>
+          </div>
+          <div class="textfield">
+              <label for="senha"> Senha </label> <br>
+              <input type="password" name="password" placeholder="Insira sua senha" required>
+          </div>
+          <!-- botao de login  -->
+           <button class="btn-login" type="submit">Login</button>
+        </form>
+    
+
+
+            
+        </div> 
+    </div>
+         
+ </div>
+</body>
+</html> 

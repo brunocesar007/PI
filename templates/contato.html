@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='contato.css')}}">
+    <title>Contato</title>
+</head>
+<body>
+    <section>
+        <h2>Fale conosco</h2>
+
+
+
+      
+
+                        <!-- Exibir mensagem de erro, se houver -->
+                        {% if error %}
+                        <p style="color: red;">{{ error }}</p>
+                    {% endif %}
+
+
+
+
+
+
+        <form action="{{url_for('contato')}}" method="POST">
+            <label for="name_contato">Nome: </label>
+            <input type="text" name="name_contato" id="name_id" placeholder="Digite seu nome" required>
+
+            <label for="email_contato">Email: </label>
+            <input type="email" name="email_contato" id="email_id" placeholder="Digite seu email" required>
+
+            <label for="mensagemm_contato">Mensagem: </label> 
+            <textarea id="Mensagem_id" name="mensagem_contato" rows="4" placeholder="Escreva sua mensagem" required></textarea>
+
+            <input type="submit" value="Enviar">
+        </form>
+    </section>
+</body>
+</html>
